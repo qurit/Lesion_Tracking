@@ -50,9 +50,9 @@ The pipeline requires **two timepoints (T1 and T2)** for the same patient:
 **Example folder structure:**
 ```text
 patient_folder/
-  ├─ 2024-06-29/               # T1 (fixed)
+  ├─ 2024-06-29/               # T1
   │   ├─ spect/spect.nii.gz
   │   └─ lesions/lesion_01.nii.gz, lesion_02.nii.gz, ...
-  └─ 2024-10-05/               # T2 (moving)
+  └─ 2024-10-05/               # T2
       ├─ spect/spect.nii.gz
       └─ lesions/lesion_01.nii.gz, lesion_02.nii.gz, ...
