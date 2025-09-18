@@ -1,8 +1,20 @@
 # Automated Pipeline for Longitudinal Lesion Tracking in SPECT Imaging using Morphology and Texture Aware Cost Function
 
 
+# Longitudinal Lesion Tracking (SPECT/CT)
 
-The pipeline begins with rigid registration of the two time-point SPECT scans using Mattes mutual information and an Euler3DTransform, ensuring spatial alignment of the images. This transformation is then applied to the lesion masks from the second time-point to align them with the first time point. For each lesion, we calculate key features at both time points, including centroid, volume (voxel count), and heterogeneity metrics derived from first-order statistics and GLCM-based analysis. To quantify lesion dissimilarity, we designed a custom cost function that accounts for spatial distance between lesion centroids (D), overlap of lesion volumes (O), and differences in texture heterogeneity ΔH ( weighting parameters α, β, γ were set to 0.5, 0.4, and 0.1, respectively)
+Robust **longitudinal lesion tracking** for nuclear medicine imaging (SPECT/CT):
+
+- **Rigid registration `T2 → T1`** (SimpleITK) with optional histogram matching and foreground body masks  
+- **Geometry-safe mask alignment** (header fix vs. NN resample) to prevent silent mis-registrations  
+- **Feature construction**: centroids (mm), volumes (mm³), simple heterogeneity (PyRadiomics first-order + GLCM)  
+- **Partial Hungarian matching** with **spatial gating** + **cosine feature similarity**  
+- **Visualization**: joint-window coronal MIPs, links colored by match strength, explicit missed/new lesions  
+- **QC**: blended MIPs with Pearson correlation and MAD metrics  
+- **CLI & notebook-friendly**: clean logging, deterministic seeds, clear outputs
+
+> **Use case**: Longitudinal SPECT/CT (e.g., RPT monitoring) where consistent lesion correspondence is needed to form lesion-level TACs, estimate TIA, and enable dose–response modeling.
+
 
 ![image](https://github.com/qurit/Lesion_Tracking/blob/main/LT_approach1.png)
 
