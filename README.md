@@ -18,6 +18,13 @@ Robust **longitudinal lesion tracking** for nuclear medicine imaging (SPECT/CT):
 
 ![image](https://github.com/qurit/Lesion_Tracking/blob/main/LT_approach1.png)
 
+---
+
+## Citation
+If you use this code, please cite:
+
+**Yousefirizi F, Kurkowska S, Benard F, Rahmim A, Uribe C.**  
+*Automated Pipeline for Longitudinal Lesion Tracking in SPECT Imaging using Morphology and Texture Aware Cost Function.* 2025.
 
 ### Install  necessary libraries
 SimpleITK>=2.3.1
