@@ -49,6 +49,3 @@ patient_folder/
   └─ 2024-10-05/               # T2 (moving)
       ├─ spect/spect.nii.gz
       └─ lesions/lesion_01.nii.gz, lesion_02.nii.gz, ...
-
-
-
