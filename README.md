@@ -51,5 +51,4 @@ patient_folder/
       └─ lesions/lesion_01.nii.gz, lesion_02.nii.gz, ...
 
 
-# To be added
-Second approach: graph-based lesion matching
+
