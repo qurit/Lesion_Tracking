@@ -35,24 +35,3 @@ scipy>=1.11
 scikit-learn>=1.3
 matplotlib>=3.8
 
-## Inputs
-The pipeline requires **two timepoints (T1 and T2)** for the same patient:
-
-- **SPECT/CT images**  
-  - `spect.nii.gz` (or another name specified in `spect-name`)  
-  - Must be in NIfTI format, with consistent orientation/spacing  
-
-- **Lesion masks**  
-  - Binary mask files (`.nii` or `.nii.gz`) located in the `lesions/` subfolder for each timepoint  
-  - Each mask corresponds to one lesion (largest connected component is extracted)  
-  - Lesion ID is parsed from the filename (e.g., `lesion_01.nii.gz` → ID=01)  
-
-**Example folder structure:**
-```text
-patient_folder/
-  ├─ 2024-06-29/               # T1
-  │   ├─ spect/spect.nii.gz
-  │   └─ lesions/lesion_01.nii.gz, lesion_02.nii.gz, ...
-  └─ 2024-10-05/               # T2
-      ├─ spect/spect.nii.gz
-      └─ lesions/lesion_01.nii.gz, lesion_02.nii.gz, ...
