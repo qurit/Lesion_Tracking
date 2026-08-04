@@ -52,5 +52,5 @@ If you use this pipeline, please cite:
 
 ## Contact
 
-Corresponding author: Carlos Uribe, PhD, MCCPM — carlos.uribe@bccancer.bc.ca
-BC Cancer / University of British Columbia, Vancouver, BC, Canada
+Corresponding author: carlos.uribe@bccancer.bc.ca
+codes questions: frizi@bccrc.ca 
